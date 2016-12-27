@@ -193,34 +193,38 @@ public class PopulateObjects {
 		return signature;
 	}
 
+	/**
+	 * @param map reference of map
+	 * @return int count of objects
+	 */
 	public int getUniqueObjects(Map map) {
 		int uniqueobjects = map.size();
 		return uniqueobjects;
 	}
 
-
-	public int getTotalFirstObjects() {
-		int firstobjcount = 0;
-		for (Integer count : repository_first_class.values())
-			firstobjcount += count;
-		return firstobjcount;
-	}
-
-	public int getTotalSecondObjects() {
-		int secondobjcount = 0;
-		for (Integer count : repository_second_class.values())
-			secondobjcount += count;
-		return secondobjcount;
+	/**
+	 * @param map reference of map
+	 * @return int count of objects
+	 */
+	public int getTotalObjects(Map map) {
+		int objcount = 0;
+		for (Object count : map.values())
+			objcount += (Integer) count;
+		return objcount;
 	}
 	
+	/**
+	 * @param debuglevelIn debug level
+	 * @return void no return value
+	 */
 	public void displayOutput(LoggerHandler.DebugLevel debuglevelIn) {
 		LoggerHandler.writeMessage("Number of unique First objects\t:\t" + this.getUniqueObjects(repository_first_class),
 				debuglevelIn);
-		LoggerHandler.writeMessage("Total Number of First objects\t:\t" + this.getTotalFirstObjects(),
+		LoggerHandler.writeMessage("Total Number of First objects\t:\t" + this.getTotalObjects(repository_first_class),
 				debuglevelIn);
 		LoggerHandler.writeMessage("Number of unique Second objects\t:\t" + this.getUniqueObjects(repository_second_class),
 				debuglevelIn);
-		LoggerHandler.writeMessage("Total Number of Second objects\t:\t" + this.getTotalSecondObjects(),
+		LoggerHandler.writeMessage("Total Number of Second objects\t:\t" + this.getTotalObjects(repository_second_class),
 				debuglevelIn);
 	}
 }

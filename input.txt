@@ -1,0 +1,18 @@
+fqn:genericDeser.util.First
+type=int, var=IntValue, value=17
+type=float, var=FloatValue, value=19.3
+type=short, var=ShortValue, value=9
+type=String, var=StringValue, value=abc
+fqn:genericDeser.util.Second
+type=int, var=IntValue, value=19
+type=double, var=DoubleValue, value=3.14
+type=boolean, var=BooleanValue, value=false
+fqn:genericDeser.util.Second
+type=int, var=IntValue, value=199
+type=double, var=DoubleValue, value=33.14
+type=boolean, var=BooleanValue, value=false
+fqn:genericDeser.util.First
+type=int, var=IntValue, value=177
+type=float, var=FloatValue, value=199.3
+type=short, var=ShortValue, value=99
+type=String, var=StringValue, value=cbaabc
